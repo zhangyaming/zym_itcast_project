@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+
 {% load staticfiles %}
-<html>
-<head>
-	<title>Rango</title>
+
+{% block title %}Rango_index{% endblock %}
+
+{% block head %}
 	{% if user.is_authenticated %}
 	<h1>Rango says...hello {{user.username}}!</h1>
 	{% else %}
 	<h1>Rango says...hello world!</h1>
 	{% endif %}
-</head>
-<body background="/static/images/jay.jpg" background-repeat:no-repeat>
+{% endblock %}
+
+{% block body_block %}
 {% if categories %}
 	<ul>
 		{% for category in categories %}
@@ -24,18 +27,7 @@
 	</strong>
 {% endif %}
 
-{% if user.is_authenticated %}
-	<a href="/rango/restricted/">Restricted Page</a><br />
-	<a href="/rango/logout/">Logout</a><br />
-{% else %}
-	<a href="/rango/register/">Register here</a><br />
-	<a href="/rango/login/">Login</a><br />
-{% endif %}
 
-
-<a href="/rango/about/">about</a><br/>
-<a href="/rango/add_category/">Add a New Category</a><br />
 <h1>git fail fuck</h1>
 <h2>fuck github</h2>
-</body>
-</html>
+{% endblock %}

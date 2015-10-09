@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Rango</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}login{% endblock %}
+
+{% block body_block %}
 	<h1>Login to Rango</h1>
 
 	<form id="login_form" method="post" action="/rango/login/">
@@ -16,6 +17,4 @@
 		<input type="submit" value="submit"/>		
 
 	</form>
-		
-</body>
-</html>
+{% endblock %}
