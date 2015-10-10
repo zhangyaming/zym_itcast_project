@@ -59,8 +59,15 @@ WSGI_APPLICATION = 'itcast_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'rango',
+        'USER': 'root',
+        'PASSWORD': 'itcast',
+        'HOST': '',
+        'PORT': '3306',
+
     }
 }
 
@@ -81,6 +88,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+STATIC_ROOT = '/var/static'
 STATIC_URL = '/static/'
 
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
@@ -96,3 +104,4 @@ STATIC_PATH,
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 LOGIN_URL = '/rango/login/'
+

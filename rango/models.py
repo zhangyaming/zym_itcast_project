@@ -17,10 +17,7 @@ class  Category(models.Model):
 	def __unicode__(self):
 		return self.name
 
-class Zhang(models.Model):
-	name = models.CharField(max_length=128, unique=True)
-	def __unicode__(self):
-		return self.name + "haha"
+
 
 class Page(models.Model):
 	"""docstring for Page"""

@@ -5,7 +5,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'itcast_project.settings')
 import django
 django.setup()
 
-from rango.models import Category, Page, Zhang
+from rango.models import Category, Page
 
 def populate():
 	python_cat = add_cat('Python') #创建python目录类
@@ -35,7 +35,7 @@ def populate():
 	add_page(cat=frame_cat,
 		title="Flask",
 		url="http://flask.pocoo.org")
-	zhang = add_zhang("亚明")
+	
 
 
 # Print out what we have added to the user.
@@ -49,9 +49,7 @@ def add_page(cat, title, url, views=0):
 def add_cat(name):
 	c = Category.objects.get_or_create(name=name)[0]
 	return c
-def add_zhang(name):
-	z = Zhang.objects.get_or_create(name=name)[0]
-	return z
+
 # Start execution here!
 if __name__ == '__main__':
 	print "Starting Rango population script..."
