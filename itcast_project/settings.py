@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'sm=gt-_wu=gy86*nfxb!e6&yxh@@s0@@ky-55439mx+ztbmur%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+#DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*',]
@@ -59,15 +59,14 @@ WSGI_APPLICATION = 'itcast_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rango',
-        'USER': 'root',
-        'PASSWORD': 'itcast',
-        'HOST': '',
-        'PORT': '3306',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'rango',
+#        'USER': 'root',
+#        'PASSWORD': 'itcast',
+#        'HOST': '',
+#        'PORT': '3306',
     }
 }
 
